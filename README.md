@@ -12,4 +12,5 @@ To use this repository, add [https://github.com/starbix/docker-templates] (https
 - openvpn: [linuxserver.io] (https://github.com/linuxserver/docker-templates)
 - Ombi (PlexRequests): [rogueosb/docker-ombi] (https://github.com/rogueosb/docker-ombi)
 - sonarr: [linuxserver.io] (https://github.com/linuxserver/docker-templates)
+- filebot: [coppit/filebot] (https://github.com/coppit/docker-filebot)
 - plexpy: ...
