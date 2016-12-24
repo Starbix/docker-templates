@@ -11,10 +11,11 @@
   [b]VERSION[/b] Set to either latest or plexpass [br]
   [b]/config[/b] Where plex should store settings and metadata\logs and configuration[br]
   [b]/media[/b] Map this to your media, you can use several submappings here[br]
+  [b]/transcode[/b] Where plex should transcode to[br]
   </Description>
   <Project>https://plex.tv/</Project>
   <Registry>https://hub.docker.com/r/plexinc/pms-docker/</Registry>
-  <Repository>linuxserver/plex</Repository>
+  <Repository>plexinc/pms-docker</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
@@ -30,10 +31,63 @@
       <Name>VERSION</Name>
       <Value>latest</Value>
     </Variable>
+    <Variable>
+      <Name>ADVERTISE_IP</Name>
+      <Value>http://[IP]:32400/</Value>
+    </Variable>
+    <Variable>
+      <Name>PLEX_CLAIM</Name>
+      <Value></Value>
+    </Variable>
   </Environment>
   <Networking>
-    <Mode>host</Mode>
-    <Publish/>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>32400</HostPort>
+        <ContainerPort>32400</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3005</HostPort>
+        <ContainerPort>3005</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8324</HostPort>
+        <ContainerPort>8324</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>32469</HostPort>
+        <ContainerPort>32469</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1900</HostPort>
+        <ContainerPort>1900</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>32410</HostPort>
+        <ContainerPort>32410</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>32412</HostPort>
+        <ContainerPort>32412</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>32413</HostPort>
+        <ContainerPort>32413</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>32414</HostPort>
+        <ContainerPort>32414</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
   </Networking>
   <Data>
     <Volume>
@@ -41,10 +95,20 @@
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/transcode</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
 <WebUI>http://[IP]:[PORT:32400]/web</WebUI>
-  <Banner>https://raw.githubusercontent.com/starbix/docker-templates/master/linuxserver.io/img/plex-banner.png</Banner>
-  <Icon>https://raw.githubusercontent.com/starbix/docker-templates/master/linuxserver.io/img/plex-icon.png</Icon>
+  <Banner>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/plex-banner.png</Banner>
+  <Icon>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/plex-icon.png</Icon>
   <ExtraParams></ExtraParams>
 <BaseImage>ubuntu:16.04</BaseImage>
 </Container>
