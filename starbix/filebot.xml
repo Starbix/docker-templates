@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Date>2016-15-08</Date>
+  <Changes>
+    Later, when you update the container, it may exit with this message in the log:
+
+    ERROR: The container's filebot.sh is newer than the one in /config. Copying the new script to /config/filebot.sh.new. Compare your filebot.sh and filebot.sh.new, being sure to copy over the VERSION line. Then restart the container.
+    This happens because some bugfix or something went into filebot.sh. Rather than deleting your filebot.sh (and losing any hard work you put into it), the container will write filebot.sh.new. It's your job to merge the two files. You can delete filebot.sh.new when you're done. NOTE: You must increase the VERSION even if you make no other changes. This will let the container know that you performed the merge. It will then start normally.
+  </Changes>
+  <Name>filebot</Name>
+  <Description>
+  This is a Docker container for running FileBot, a media file organizer. Drop files into the input directory, and they'll be cleaned up and moved to the output directory.
+  </Description>
+  <Project>https://www.filebot.net</Project>
+  <Overview>This is a Docker container for running FileBot, a media file organizer. Drop files into the input directory, and they'll be cleaned up and moved to the output directory.</Overview>
+  <Registry>https://hub.docker.com/r/coppit/filebot/</Registry>
+  <Repository>coppit/filebot</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/input</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/output</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+
+  <Banner>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/filebot-banner.png</Banner>
+  <Icon>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/filebot-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+<BaseImage>phusion/baseimage:0.9.19</BaseImage>
+</Container>
