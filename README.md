@@ -1,10 +1,10 @@
 # docker-templates
 
-- Plex: Official docker by Plex
-- nginx: Official docker
-- deluge: linuxserver.io
-- duckdns: linuxserver.io
-- openvpn: linuxserver.io
-- plexrequests: rogueosb
-- sonarr: linuxserver.io
+- Plex: [Official docker by Plex] (https://github.com/plexinc/pms-docker)
+- nginx: [Official docker] (https://github.com/docker-library/docs/tree/master/nginx)
+- deluge: [linuxserver.io] (https://github.com/linuxserver/docker-templates)
+- duckdns: [linuxserver.io] (https://github.com/linuxserver/docker-templates)
+- openvpn: [linuxserver.io] (https://github.com/linuxserver/docker-templates)
+- Ombi (PlexRequests): [rogueosb/docker-ombi] (https://github.com/rogueosb/docker-ombi)
+- sonarr: [linuxserver.io] (https://github.com/linuxserver/docker-templates)
 - plexpy: ...
