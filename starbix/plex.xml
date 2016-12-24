@@ -12,6 +12,8 @@
   [b]/config[/b] Where plex should store settings and metadata\logs and configuration[br]
   [b]/media[/b] Map this to your media, you can use several submappings here[br]
   [b]/transcode[/b] Where plex should transcode to[br]
+  [b]PLEX_CLAIM[/b] The claim token for the server to obtain a real server token. If not provided, server is will not be automatically logged in. If server is already logged in, this parameter is ignored. You can obtain a claim token to login your server to your plex account by visiting https://www.plex.tv/claim Note: These claim tokens only last for 5 minutes and they will only be honored if they are generated and used from the same IP address. This is intended for situations where the machines on which they are generated and used are behind the same NAT or home router.[br]
+  [b]ADVERTISE_IP[/b] This variable defines the additional IPs on which the server may be be found. For example: http://10.1.1.23:32400. This is recommended because the IP address seen within the container is usually not the IP address of the host. This adds to the list where the server advertises that it can be found.[br]
   </Description>
   <Project>https://plex.tv/</Project>
   <Registry>https://hub.docker.com/r/plexinc/pms-docker/</Registry>
@@ -88,7 +90,7 @@
         <ContainerPort>32414</ContainerPort>
         <Protocol>udp</Protocol>
       </Port>
-    </Publish>
+     </Publish>
   </Networking>
   <Data>
     <Volume>
