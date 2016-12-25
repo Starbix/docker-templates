@@ -38,7 +38,7 @@
   <Data>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/config</ContainerDir>
+      <ContainerDir>/etc/nginx</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
