@@ -17,7 +17,7 @@
   </Description>
   <Project>https://plex.tv/</Project>
   <Registry>https://hub.docker.com/r/plexinc/pms-docker/</Registry>
-  <Repository>plexinc/pms-docker:plexpass</Repository>
+  <Repository>plexinc/pms-docker</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>

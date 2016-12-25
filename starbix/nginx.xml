@@ -15,7 +15,7 @@
   </Description>
   <Project>https://nginx.com/</Project>
   <Registry>https://hub.docker.com/_/nginx/</Registry>
-  <Repository>nginx</Repository>
+  <Repository>nginx:alpine</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
@@ -43,7 +43,7 @@
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/www</ContainerDir>
+      <ContainerDir>/usr/share/nginx/html</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
