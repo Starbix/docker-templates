@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nextcloud</Name>
+  <Repository>lsiodev/nextcloud</Repository>
+  <Registry>https://hub.docker.com/r/lsiodev/nextcloud</Registry>
+  <Project>https://nextcloud.com/</Project>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=50090.0</Support>
+  <Overview>Nextcloud is an open source, self-hosted file sync &amp;amp; communication app platform. Access &amp;amp; sync your files, contacts, calendars and communicate &amp;amp; collaborate across your devices. You decide what happens with your data, where it is and who can access it!</Overview>
+  <Beta>True</Beta>
+  <Category>Cloud: Productivity: Tools:</Category>
+  <Date>2016-07-01</Date>
+  <WebUI>https://[IP]:[PORT:8888]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/starbix/img/nextcloud-icon.png</Icon>
+  <ExtraParams/>
+  <DateInstalled>1467329739</DateInstalled>
+  <Description>Nextcloud is an open source, self-hosted file sync &amp;amp; communication app platform. Access &amp;amp; sync your files, contacts, calendars and communicate &amp;amp; collaborate across your devices. You decide what happens with your data, where it is and who can access it!</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8888</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Nextcloud Data" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Port 1" Target="443" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+<DonateText>Donations</DonateText>
+<DonateLink>https://www.linuxserver.io/index.php/donations/</DonateLink>
+<DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
+<BaseImage>lsiobase/alpine.nginx</BaseImage>
+</Container>

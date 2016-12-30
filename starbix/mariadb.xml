@@ -68,4 +68,14 @@
   <Banner>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/mariadb-banner.png</Banner>
   <Icon>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/mariadb-icon.png</Icon>
   <ExtraParams></ExtraParams>
+  <Config Name="Host Port 1" Target="3306" Default="3306" Mode="tcp" Description="Container Port: 3306" Type="Port" Display="always" Required="true" Mask="false">3306</Config>
+ <Config Name="Host Path 1" Target="/var/lib/mysql" Default="" Mode="rw" Description="Container Path: /var/lib/mysql" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mariadb</Config>
+ <Config Name="Key 1" Target="MYSQL_ROOT_PASSWORD" Default="" Mode="" Description="Container Variable: MYSQL_ROOT_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+ <Config Name="Key 2" Target="MYSQL_DATABASE" Default="" Mode="" Description="Container Variable: MYSQL_DATABASE" Type="Variable" Display="always" Required="false" Mask="false">nextcloud</Config>
+ <Config Name="Key 3" Target="MYSQL_USER" Default="" Mode="" Description="Container Variable: MYSQL_USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+ <Config Name="Key 4" Target="MYSQL_PASSWORD" Default="" Mode="" Description="Container Variable: MYSQL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+ <Config Name="Key 5" Target="MYSQL_RANDOM_ROOT_PASSWORD" Default="" Mode="" Description="Container Variable: MYSQL_RANDOM_ROOT_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"/>
+ <Config Name="Key 6" Target="MYSQL_ONETIME_PASSWORD" Default="" Mode="" Description="Container Variable: MYSQL_ONETIME_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"/>
+ <Config Name="Key 7" Target="MYSQL_ONETIME_PASSWORD" Default="" Mode="" Description="Container Variable: MYSQL_ONETIME_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"/>
+
 </Container>
