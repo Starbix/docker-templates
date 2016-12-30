@@ -3,7 +3,7 @@
   <Beta>False</Beta>
   <Category></Category>
   <Date>2016-12-24</Date>
-  <Name>nginx</Name>
+  <Name>nginx-letsencrypt</Name>
   <Description></Description>
   <Project>https://nginx.com/</Project>
   <Registry>https://hub.docker.com/aptalce/nginx-letsencrypt/</Registry>
@@ -22,6 +22,10 @@
     <Variable>
       <Name>SUBDOMAINS</Name>
       <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>DHLEVEL</Name>
+      <Value>4096</Value>
     </Variable>
   </Environment>
   <Networking>
