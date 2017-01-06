@@ -6,7 +6,8 @@
 To use this repository, add [https://github.com/starbix/docker-templates] (https://github.com/starbix/docker-templates) to your template repositories in unRAID.
 ##Source
 - Plex: [Official docker by Plex] (https://github.com/plexinc/pms-docker)
-- nginx: [Official docker] (https://github.com/docker-library/docs/tree/master/nginx) - work in progress
+- nginx: [aptalca/nginx-letsencrypt] (https://github.com/aptalca/docker-webserver) - nginx+letsencrypt phusion
+- boring-nginx: [wonderfall/boring-nginx] (https://github.com/Wonderfall/dockerfiles/tree/master/boring-nginx) - nginx+boringSSL PHP7 alpine
 - deluge: [linuxserver.io] (https://github.com/linuxserver/docker-templates)
 - duckdns: [linuxserver.io] (https://github.com/linuxserver/docker-templates)
 - openvpn: [linuxserver.io] (https://github.com/linuxserver/docker-templates)

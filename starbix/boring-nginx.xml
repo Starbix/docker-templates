@@ -6,7 +6,7 @@
   <Name>boring-nginx</Name>
   <Description></Description>
   <Project>https://nginx.com/</Project>
-  <Registry>https://hub.docker.com/aptalce/nginx-letsencrypt/</Registry>
+  <Registry>https://hub.docker.com/r/wonderfall/boring-nginx/</Registry>
   <Repository>wonderfall/boring-nginx</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>

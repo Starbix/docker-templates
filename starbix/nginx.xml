@@ -6,7 +6,7 @@
   <Name>nginx-letsencrypt</Name>
   <Description></Description>
   <Project>https://nginx.com/</Project>
-  <Registry>https://hub.docker.com/aptalce/nginx-letsencrypt/</Registry>
+  <Registry>https://hub.docker.com/r/aptalca/nginx-letsencrypt/</Registry>
   <Repository>aptalca/nginx-letsencrypt</Repository>
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
