@@ -15,7 +15,7 @@
   <Project>https://www.filebot.net</Project>
   <Overview>This is a Docker container for running FileBot, a media file organizer. Drop files into the input directory, and they'll be cleaned up and moved to the output directory.</Overview>
   <Registry>https://hub.docker.com/r/coppit/filebot/</Registry>
-  <Repository>coppit/filebot</Repository>
+  <Repository>starbix/filebot</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
@@ -32,12 +32,7 @@
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/input</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/output</ContainerDir>
+      <ContainerDir>/media</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
