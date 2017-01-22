@@ -1,21 +1,19 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>nextcloud</Name>
-  <Repository>lsiodev/nextcloud</Repository>
-  <Registry>https://hub.docker.com/r/lsiodev/nextcloud</Registry>
+  <Repository>wonderfall/nextcloud</Repository>
+  <Registry>https://hub.docker.com/r/wonderfall/nextcloud</Registry>
   <Project>https://nextcloud.com/</Project>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>http://lime-technology.com/forum/index.php?topic=50090.0</Support>
   <Overview>Nextcloud is an open source, self-hosted file sync &amp;amp; communication app platform. Access &amp;amp; sync your files, contacts, calendars and communicate &amp;amp; collaborate across your devices. You decide what happens with your data, where it is and who can access it!</Overview>
-  <Beta>True</Beta>
+  <Beta>false</Beta>
   <Category>Cloud: Productivity: Tools:</Category>
   <Date>2016-07-01</Date>
   <WebUI>https://[IP]:[PORT:8888]/</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/starbix/img/nextcloud-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/nextcloud-icon.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1467329739</DateInstalled>
   <Description>Nextcloud is an open source, self-hosted file sync &amp;amp; communication app platform. Access &amp;amp; sync your files, contacts, calendars and communicate &amp;amp; collaborate across your devices. You decide what happens with your data, where it is and who can access it!</Description>
   <Networking>
     <Mode>bridge</Mode>
@@ -30,34 +28,100 @@
   <Data>
     <Volume>
       <HostDir/>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir/>
-      <ContainerDir>/data</ContainerDir>
+      <ContainerDir>/apps2</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/var/lib/redis</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value>99</Value>
-      <Name>PUID</Name>
+      <Value>991</Value>
+      <Name>UID</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>100</Value>
-      <Name>PGID</Name>
+      <Value>991</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10G</Value>
+      <Name>UPLOAD_MAX_SIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>128M</Value>
+      <Name>APC_SHM_SIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>128</Value>
+      <Name>OPCACHE_MEM_SIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>64mb</Value>
+      <Name>REDIS_MAX_MEMORY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>15m</Value>
+      <Name>CRON_PERIOD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>ADMIN_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ADMIN_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>mysql</Value>
+      <Name>DB_TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>nextcloud</Value>
+      <Name>DB_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>nextcloud</Value>
+      <Name>DB_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>mariadb</Value>
+      <Name>DB_HOST</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Nextcloud Data" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Port 1" Target="443" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-<DonateText>Donations</DonateText>
-<DonateLink>https://www.linuxserver.io/index.php/donations/</DonateLink>
-<DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
-<BaseImage>lsiobase/alpine.nginx</BaseImage>
+  <Config Name="UID" Target="UID" Default="991" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">991</Config>
+  <Config Name="GID" Target="GID" Default="991" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">991</Config>
+<BaseImage>alpine:edge</BaseImage>
 </Container>
