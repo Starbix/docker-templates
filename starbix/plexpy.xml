@@ -22,7 +22,7 @@
   </Description>
   <Project>http://forums.plex.tv/discussion/169591/plexpy-yet-another-web-front-end-for-plexwatch</Project>
   <Registry>https://hub.docker.com/r/starbix/docker-plexpy/</Registry>
-  <Repository>starbix/docker-plexpy</Repository>
+  <Repository>starbix/plexpy</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
@@ -57,7 +57,6 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Version>45546b54</Version>
   <WebUI>http://[IP]:[PORT:8181]/</WebUI>
   <Banner>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plexpy-banner.png</Banner>
   <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plexpy-icon.png</Icon>
