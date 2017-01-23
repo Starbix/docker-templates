@@ -3,11 +3,11 @@
   <Beta>False</Beta>
   <Category></Category>
   <Date>2016-12-24</Date>
-  <Name>boring-nginx</Name>
+  <Name>nginx</Name>
   <Description></Description>
   <Project>https://nginx.com/</Project>
-  <Registry>https://hub.docker.com/r/wonderfall/boring-nginx/</Registry>
-  <Repository>wonderfall/boring-nginx</Repository>
+  <Registry>https://hub.docker.com/r/starbix/nginx/</Registry>
+  <Repository>starbix/nginx</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
@@ -31,7 +31,7 @@
       <Port>
         <HostPort>4430</HostPort>
         <ContainerPort>4430</ContainerPort>
-        <Protocol>utcp</Protocol>
+        <Protocol>tcp</Protocol>
       </Port>
      </Publish>
   </Networking>
