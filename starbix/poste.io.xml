@@ -5,8 +5,8 @@
 <Date>2016-08-08</Date>
   <Name>poste.io</Name>
   <Overview>SMTP + IMAP + POP3 + Antispam + Antivirus + Web administration + Web email ...on your server in ~5 minutes</Overview>
-  <Registry>https://hub.docker.com/r/analogic/poste.io/</Registry>
-  <Repository>analogic/poste.io</Repository>
+  <Registry>https://hub.docker.com/r/starbix/poste.io/</Registry>
+  <Repository>starbix/poste.io</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
