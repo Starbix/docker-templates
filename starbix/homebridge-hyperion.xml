@@ -23,5 +23,6 @@
      </Publish>
   </Networking>
 <ExtraParams></ExtraParams>
-<Icon>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/homebridge-icon.png</Icon>
+<WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/homebridge-icon.png</Icon>
 </Container>
