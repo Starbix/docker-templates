@@ -57,6 +57,11 @@
         <ContainerPort>995</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+      <Port>
+        <HostPort>4190</HostPort>
+        <ContainerPort>4190</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
     </Publish>
   </Networking>
   <Data>

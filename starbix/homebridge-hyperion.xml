@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category></Category>
+  <Date>2016-12-24</Date>
+  <Name>homebridge</Name>
+  <Description>
+    Homebridge is a lightweight NodeJS server you can run on your home network that emulates the iOS HomeKit API. It supports Plugins, which are community-contributed modules that provide a basic bridge from HomeKit to various 3rd-party APIs provided by manufacturers of "smart home" devices.
+  </Description>
+  <Project>https://github.com/nfarina/homebridge</Project>
+  <Registry>https://hub.docker.com/r/starbix/homebridge-hyperion</Registry>
+  <Repository>starbix/homebridge-hyperion</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>51826</HostPort>
+        <ContainerPort>51826</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+     </Publish>
+  </Networking>
+<ExtraParams></ExtraParams>
+</Container>
