@@ -71,7 +71,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:443]/</WebUI>
+  <WebUI>https://[IP]:[PORT:443]/</WebUI>
   <Banner>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/poste.io-banner.png</Banner>
   <Icon>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/poste.io-icon.png</Icon>
   <ExtraParams></ExtraParams>
