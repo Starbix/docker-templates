@@ -8,7 +8,7 @@ To use this repository, add [https://github.com/starbix/docker-templates] (https
 - Plex: [Official docker by Plex] (https://github.com/plexinc/pms-docker)
 - nginx: [aptalca/nginx-letsencrypt] (https://github.com/aptalca/docker-webserver) - nginx+letsencrypt phusion
 - boring-nginx: [wonderfall/boring-nginx] (https://github.com/Wonderfall/dockerfiles/tree/master/boring-nginx) - nginx+boringSSL PHP7 alpine  (MAY NOT WORK)
--nginx+nextcloud: [starbix/nginx] (https://github.com/Starbix/docker-nginx) - boring-nginx + nextcloud  (NOT WORKING YET)
+- nginx+nextcloud: [starbix/nginx] (https://github.com/Starbix/docker-nginx) - boring-nginx + nextcloud  (NOT WORKING YET)
 - deluge: [linuxserver.io] (https://github.com/linuxserver/docker-templates)
 - duckdns: [linuxserver.io] (https://github.com/linuxserver/docker-templates)
 - openvpn: [linuxserver.io] (https://github.com/linuxserver/docker-templates)
