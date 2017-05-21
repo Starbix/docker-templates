@@ -1,10 +1,11 @@
 # docker-templates for unRAID
 
-#USE THIS ON YOUR OWN RISK
+# USE THIS ON YOUR OWN RISK
 
-##Tutorial
+## Tutorial
 To use this repository, add [https://github.com/starbix/docker-templates] (https://github.com/starbix/docker-templates) to your template repositories in unRAID.
-##Source
+
+## Source
 - Plex: [Official docker by Plex] (https://github.com/plexinc/pms-docker)
 - nginx: [aptalca/nginx-letsencrypt] (https://github.com/aptalca/docker-webserver) - nginx+letsencrypt phusion
 - boring-nginx: [wonderfall/boring-nginx] (https://github.com/Wonderfall/dockerfiles/tree/master/boring-nginx) - nginx+boringSSL PHP7 alpine
