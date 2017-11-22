@@ -1,57 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Container>
-  <Beta>False</Beta>
-  <Category></Category>
-  <Date>2016-12-24</Date>
-  <Name>nginx-letsencrypt</Name>
-  <Description></Description>
-  <Project>https://nginx.com/</Project>
-  <Registry>https://hub.docker.com/r/aptalca/nginx-letsencrypt/</Registry>
-  <Repository>aptalca/nginx-letsencrypt</Repository>
-  <BindTime>true</BindTime>
-  <Privileged>true</Privileged>
-  <Environment>
-    <Variable>
-      <Name>EMAIL</Name>
-      <Value></Value>
-    </Variable>
-    <Variable>
-      <Name>URL</Name>
-      <Value></Value>
-    </Variable>
-    <Variable>
-      <Name>SUBDOMAINS</Name>
-      <Value></Value>
-    </Variable>
-    <Variable>
-      <Name>DHLEVEL</Name>
-      <Value>4096</Value>
-    </Variable>
-  </Environment>
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nginx</Name>
+  <Repository>starbix/nginx</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <Description/>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>81</HostPort>
-        <ContainerPort>80</ContainerPort>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>443</HostPort>
-        <ContainerPort>443</ContainerPort>
-        <Protocol>utcp</Protocol>
+        <HostPort>4430</HostPort>
+        <ContainerPort>4430</ContainerPort>
+        <Protocol>tcp</Protocol>
       </Port>
-     </Publish>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/config</ContainerDir>
+      <HostDir>/mnt/user/appdata/nginx/sites-enabled/</HostDir>
+      <ContainerDir>/sites-enabled</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/certs/</HostDir>
+      <ContainerDir>/certs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/www</HostDir>
+      <ContainerDir>/www</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx/amp</HostDir>
+      <ContainerDir>/etc/amplify-agent</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx/logs/</HostDir>
+      <ContainerDir>/nginx/log</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-<WebUI>https://[IP]:[PORT:443]</WebUI>
-  <Banner>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/nginx-banner.png</Banner>
-  <Icon>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/nginx-icon.png</Icon>
-  <ExtraParams></ExtraParams>
-</Container>
+  <Environment/>
+  <Config Name="Host Path 1" Target="/sites-enabled" Default="" Mode="rw" Description="Container Path: /sites-enabled" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/sites-enabled/</Config>
+  <Config Name="Host Path 2" Target="/certs" Default="" Mode="rw" Description="Container Path: /certs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/certs/</Config>
+  <Config Name="Host Port 1" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="Host Port 2" Target="4430" Default="" Mode="tcp" Description="Container Port: 4430" Type="Port" Display="always" Required="false" Mask="false">4430</Config>
+  <Config Name="Host Path 3" Target="/www" Default="" Mode="rw" Description="Container Path: /www" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/www</Config>
+  <Config Name="Host Path 4" Target="/etc/amplify-agent" Default="" Mode="rw" Description="Container Path: /etc/amplify-agent" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/amp</Config>
+  <Config Name="Host Path 5" Target="/nginx/log" Default="" Mode="rw" Description="Container Path: /nginx/log" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/logs/</Config>
