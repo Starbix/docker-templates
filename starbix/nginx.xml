@@ -9,9 +9,9 @@
   <Support/>
   <Overview/>
   <Category/>
-  <WebUI/>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://raw.githubusercontent.com/starbix/docker-templates/master/starbix/img/nginx-icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <Description/>
@@ -58,10 +58,12 @@
     </Volume>
   </Data>
   <Environment/>
-  <Config Name="Host Path 1" Target="/sites-enabled" Default="" Mode="rw" Description="Container Path: /sites-enabled" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/sites-enabled/</Config>
-  <Config Name="Host Path 2" Target="/certs" Default="" Mode="rw" Description="Container Path: /certs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/certs/</Config>
-  <Config Name="Host Port 1" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
-  <Config Name="Host Port 2" Target="4430" Default="" Mode="tcp" Description="Container Port: 4430" Type="Port" Display="always" Required="false" Mask="false">4430</Config>
-  <Config Name="Host Path 3" Target="/www" Default="" Mode="rw" Description="Container Path: /www" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/www</Config>
-  <Config Name="Host Path 4" Target="/etc/amplify-agent" Default="" Mode="rw" Description="Container Path: /etc/amplify-agent" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/amp</Config>
-  <Config Name="Host Path 5" Target="/nginx/log" Default="" Mode="rw" Description="Container Path: /nginx/log" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/logs/</Config>
+  <Config Name="Config files" Target="/sites-enabled" Default="" Mode="rw" Description="Container Path: /sites-enabled" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/sites-enabled/</Config>
+  <Config Name="certificates" Target="/certs" Default="" Mode="rw" Description="Container Path: /certs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/certs/</Config>
+  <Config Name="HTTP Port" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="HTTPS Port" Target="4430" Default="" Mode="tcp" Description="Container Port: 4430" Type="Port" Display="always" Required="false" Mask="false">4430</Config>
+  <Config Name="WWW Folder" Target="/www" Default="" Mode="rw" Description="Container Path: /www" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/www</Config>
+  <Config Name="Amplify config" Target="/etc/amplify-agent" Default="" Mode="rw" Description="Container Path: /etc/amplify-agent" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/amp</Config>
+  <Config Name="Nginx log files" Target="/nginx/log" Default="" Mode="rw" Description="Container Path: /nginx/log" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/logs/</Config>
+<BaseImage>alpine:latest</BaseImage>
+</Container>
