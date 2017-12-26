@@ -1,5 +1,8 @@
-# docker-templates for unRAID
-[![license](https://img.shields.io/github/license/starbix/docker-templates.svg)]()
+# docker-templates
+
+> Docker templates for unRAID
+
+[![license](https://img.shields.io/github/license/starbix/docker-templates.svg)](https://github.com/starbix/docker-templates)
 
 
 ## Tutorial
@@ -12,3 +15,15 @@ To use this repository, add [https://github.com/starbix/docker-templates](https:
 - plexpy: [starbix/plexpy](https://github.com/starbix/docker-filebot) - added sshpass and ssh for custom scripts
 - docker-mailserver: [tomav/docker-mailserver](https://github.com/tomav/docker-mailserver)
 - homebridge: [starbix/homebridge](https://github.com/Starbix/dockerimages/tree/master/homebridge)
+
+## Maintainers
+
+[@Starbix](https://github.com/Starbix)
+
+## Contribute
+
+PRs accepted.
+
+## License
+
+MIT © 2017 Cédric Laubacher
