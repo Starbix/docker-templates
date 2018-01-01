@@ -15,6 +15,7 @@ To use this repository, add [https://github.com/starbix/docker-templates](https:
 - plexpy: [starbix/plexpy](https://github.com/starbix/docker-filebot) - added sshpass and ssh for custom scripts
 - docker-mailserver: [tomav/docker-mailserver](https://github.com/tomav/docker-mailserver)
 - homebridge: [starbix/homebridge](https://github.com/Starbix/dockerimages/tree/master/homebridge)
+- with the Hyperion module
 
 ## Maintainers
 
@@ -26,4 +27,4 @@ PRs accepted.
 
 ## License
 
-MIT © 2017 Cédric Laubacher
+MIT © 2018 Cédric Laubacher
