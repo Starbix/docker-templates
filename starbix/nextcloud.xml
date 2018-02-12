@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>nextcloud</Name>
   <Repository>wonderfall/nextcloud</Repository>
-  <Registry>https://hub.docker.com/r/wonderfall/nextcloud</Registry>
+  <Registry>https://hub.docker.com/r/starbix/nextcloud</Registry>
   <Project>https://nextcloud.com/</Project>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
