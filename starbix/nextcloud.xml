@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>nextcloud</Name>
-  <Repository>wonderfall/nextcloud</Repository>
+  <Repository>starbix/nextcloud</Repository>
   <Registry>https://hub.docker.com/r/starbix/nextcloud</Registry>
   <Project>https://nextcloud.com/</Project>
   <Network>bridge</Network>
@@ -59,7 +59,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>10G</Value>
+      <Value>25G</Value>
       <Name>UPLOAD_MAX_SIZE</Name>
       <Mode/>
     </Variable>
@@ -123,5 +123,5 @@
   <Config Name="Nextcloud Data" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="UID" Target="UID" Default="991" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">991</Config>
   <Config Name="GID" Target="GID" Default="991" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">991</Config>
-<BaseImage>alpine:edge</BaseImage>
+<BaseImage>alpine</BaseImage>
 </Container>
