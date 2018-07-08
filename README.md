@@ -12,7 +12,7 @@ To use this repository, add [https://github.com/starbix/docker-templates](https:
 - Plex: [Official docker by Plex](https://github.com/plexinc/pms-docker)
 - plex-ldap: [starbix/plex-ldap](https://github.com/Starbix/dockerimages/tree/master/plex-ldap)
 - nginx: [starbix/nginx](https://github.com/Starbix/dockerimages/tree/master/nginx)
-- docker-mailserver: [tomav/docker-mailserver](https://github.com/tomav/docker-mailserver)
+- nextcloud: [starbix/nextcloud](https://github.com/Starbix/dockerimages/tree/master/nextcloud)
 - homebridge (with hyperion): [starbix/homebridge](https://github.com/Starbix/dockerimages/tree/master/homebridge)
 
 ## Maintainers

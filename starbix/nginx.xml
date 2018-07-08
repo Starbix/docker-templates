@@ -53,7 +53,7 @@
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/nginx/logs/</HostDir>
-      <ContainerDir>/nginx/log</ContainerDir>
+      <ContainerDir>/nginx/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -64,6 +64,6 @@
   <Config Name="HTTPS Port" Target="4430" Default="" Mode="tcp" Description="Container Port: 4430" Type="Port" Display="always" Required="false" Mask="false">4430</Config>
   <Config Name="WWW Folder" Target="/www" Default="" Mode="rw" Description="Container Path: /www" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/www</Config>
   <Config Name="Amplify config" Target="/etc/amplify-agent" Default="" Mode="rw" Description="Container Path: /etc/amplify-agent" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/amp</Config>
-  <Config Name="Nginx log files" Target="/nginx/log" Default="" Mode="rw" Description="Container Path: /nginx/log" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/logs/</Config>
+  <Config Name="Nginx log files" Target="/nginx/logs" Default="" Mode="rw" Description="Container Path: /nginx/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/logs/</Config>
 <BaseImage>alpine:latest</BaseImage>
 </Container>
