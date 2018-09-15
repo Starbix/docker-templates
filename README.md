@@ -1,12 +1,12 @@
 # docker-templates
 
-> Docker templates for unRAID
+> Docker templates for Unraid OS
 
 [![license](https://img.shields.io/github/license/starbix/docker-templates.svg)](https://github.com/starbix/docker-templates)
 
 
 ## Tutorial
-To use this repository, add [https://github.com/starbix/docker-templates](https://github.com/starbix/docker-templates) to your template repositories in unRAID.
+To use this repository, add [https://github.com/starbix/docker-templates](https://github.com/starbix/docker-templates) to your template repositories in Unraid.
 
 ## Source
 - Plex: [Official docker by Plex](https://github.com/plexinc/pms-docker)
