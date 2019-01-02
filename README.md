@@ -25,4 +25,4 @@ PRs accepted.
 
 ## License
 
-MIT © 2018 Cédric Laubacher
+MIT © 2019 Cédric Laubacher
